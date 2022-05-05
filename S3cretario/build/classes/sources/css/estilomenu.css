@@ -1,0 +1,28 @@
+.context-menu {
+    -fx-background-color: #383A64;
+
+}
+.menu-bar .label {
+    -fx-font-size: 12pt;
+    -fx-text-fill: #DABFFF;
+    -fx-font-family: "Segoe UI";
+    -fx-padding: 2 15 2 15;
+}
+
+.menu:hover, .menu:focused, .menu:showing {
+    -fx-background-color: #4F518C;
+    -fx-text-fill: #DABFFF;
+}
+
+.menu-item {
+    -fx-font-size: 12pt;
+    -fx-text-fill: #DABFFF;
+    -fx-font-family: "Segoe UI";
+    -fx-padding: 2 15 2 15;
+}
+
+.menu-item:hover, .menu-item:focused, .menu-item:showing {
+    -fx-background-color: #4F518C;
+    -fx-text-fill: #DABFFF;
+}
+

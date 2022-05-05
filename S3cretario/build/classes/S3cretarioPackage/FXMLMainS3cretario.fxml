@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="668.0" prefWidth="823.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="S3cretarioPackage.S3cretariocontroller">
+   <children>
+      <Pane layoutY="32.0" prefHeight="127.0" prefWidth="823.0" style="-fx-background-color: #2C2A4A;" AnchorPane.bottomAnchor="509.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="32.0">
+         <children>
+            <ImageView fitHeight="74.0" fitWidth="469.0" layoutX="177.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../sources/img/logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <MenuBar layoutY="-2.0" prefHeight="24.0" prefWidth="823.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Inicio">
+            <items>
+              <MenuItem id="nuevo" text="Nuevo" />
+              <MenuItem id="cerrar" fx:id="itemcerrar" onAction="#cerrar" text="Cerrar" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ayuda">
+            <items>
+              <MenuItem id="menuinformacion" text="Informacion" />
+            </items>
+          </Menu>
+        </menus>
+         <effect>
+            <DropShadow />
+         </effect>
+         <padding>
+            <Insets bottom="2.0" left="10.0" top="5.0" />
+         </padding>
+         <stylesheets>
+            <URL value="@../sources/css/estilomenu.css" />
+         </stylesheets>
+         <styleClass>
+            <String fx:value="label" />
+            <String fx:value="context-menu" />
+         </styleClass>
+      </MenuBar>
+      <TabPane cache="true" layoutY="158.0" prefHeight="510.0" prefWidth="823.0" stylesheets="@../sources/css/estilopanel.css" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="158.0">
+        <tabs>
+          <Tab text="Información">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField layoutX="180.0" layoutY="143.0" prefHeight="29.0" prefWidth="331.0" promptText=" Nombre de la empresa auditora.">
+                           <font>
+                              <Font name="Calibri" size="11.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow blurType="TWO_PASS_BOX" choke="0.05" height="5.84" radius="8.157499999999999" width="28.79" />
+                           </effect>
+                        </TextField>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="133.0" prefHeight="50.0" prefWidth="166.0" text="Empresa" textAlignment="CENTER" textFill="#dabfff" textOverrun="CENTER_ELLIPSIS">
+                           <font>
+                              <Font name="Calibri Bold" size="19.0" />
+                           </font>
+                           <effect>
+                              <Bloom threshold="0.76" />
+                           </effect>
+                        </Label>
+                        <TextField layoutX="180.0" layoutY="218.0" prefHeight="29.0" prefWidth="331.0" promptText=" Nombre del auditor/a que realizara la auditora.">
+                           <font>
+                              <Font name="Calibri" size="11.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow blurType="TWO_PASS_BOX" choke="0.05" height="5.84" radius="8.157499999999999" width="28.79" />
+                           </effect>
+                        </TextField>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="206.0" prefHeight="50.0" prefWidth="166.0" text="Auditor" textAlignment="CENTER" textFill="#dabfff" textOverrun="CENTER_ELLIPSIS">
+                           <font>
+                              <Font name="Calibri Bold" size="19.0" />
+                           </font>
+                           <effect>
+                              <Bloom threshold="0.76" />
+                           </effect>
+                        </Label>
+                        <TextField layoutX="180.0" layoutY="295.0" prefHeight="29.0" prefWidth="331.0" promptText="Nombre de la auditoria.">
+                           <font>
+                              <Font name="Calibri" size="11.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow blurType="TWO_PASS_BOX" choke="0.05" height="5.84" radius="8.157499999999999" width="28.79" />
+                           </effect>
+                        </TextField>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="285.0" prefHeight="50.0" prefWidth="166.0" text="Auditoria" textAlignment="CENTER" textFill="#dabfff" textOverrun="CENTER_ELLIPSIS">
+                           <font>
+                              <Font name="Calibri Bold" size="19.0" />
+                           </font>
+                           <effect>
+                              <Bloom threshold="0.76" />
+                           </effect>
+                        </Label>
+                        <TextField layoutX="180.0" layoutY="371.0" prefHeight="29.0" prefWidth="331.0" promptText="Empresa a la que se le realiza la auditoria">
+                           <font>
+                              <Font name="Calibri" size="11.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow blurType="TWO_PASS_BOX" choke="0.05" height="5.84" radius="8.157499999999999" width="28.79" />
+                           </effect>
+                        </TextField>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="361.0" prefHeight="50.0" prefWidth="166.0" text="Empresa" textAlignment="CENTER" textFill="#dabfff" textOverrun="CENTER_ELLIPSIS">
+                           <font>
+                              <Font name="Calibri Bold" size="19.0" />
+                           </font>
+                           <effect>
+                              <Bloom threshold="0.76" />
+                           </effect>
+                        </Label>
+                        <Separator layoutX="14.0" layoutY="100.0" prefHeight="24.0" prefWidth="795.0" />
+                        <ImageView fitHeight="70.0" fitWidth="469.0" layoutX="177.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../sources/img/informacion.png" />
+                           </image>
+                        </ImageView>
+                        <DatePicker layoutX="584.0" layoutY="174.0" />
+                        <DatePicker layoutX="584.0" layoutY="271.0" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="601.0" layoutY="124.0" prefHeight="50.0" prefWidth="166.0" text="Fecha de inicio" textAlignment="CENTER" textFill="#dabfff" textOverrun="CENTER_ELLIPSIS">
+                           <font>
+                              <Font name="Calibri Bold" size="19.0" />
+                           </font>
+                           <effect>
+                              <Bloom threshold="0.76" />
+                           </effect>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="601.0" layoutY="218.0" prefHeight="50.0" prefWidth="166.0" text="Fecha de fin" textAlignment="CENTER" textFill="#dabfff" textOverrun="CENTER_ELLIPSIS">
+                           <font>
+                              <Font name="Calibri Bold" size="19.0" />
+                           </font>
+                           <effect>
+                              <Bloom threshold="0.76" />
+                           </effect>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="601.0" layoutY="324.0" prefHeight="50.0" prefWidth="166.0" text="Revision" textAlignment="CENTER" textFill="#dabfff" textOverrun="CENTER_ELLIPSIS">
+                           <font>
+                              <Font name="Calibri Bold" size="19.0" />
+                           </font>
+                           <effect>
+                              <Bloom threshold="0.76" />
+                           </effect>
+                        </Label>
+                        <ComboBox fx:id="revBox" layoutX="584.0" layoutY="371.0" prefHeight="28.0" prefWidth="213.0" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Vulnerabilidades">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Separator layoutX="14.0" layoutY="100.0" prefHeight="24.0" prefWidth="795.0" />
+                        <ImageView fitHeight="97.0" fitWidth="538.0" layoutX="143.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../sources/img/vulnerabilidades.png" />
+                           </image>
+                        </ImageView>
+                        <TableView fx:id="tablacodigos" layoutX="14.0" layoutY="124.0" prefHeight="330.0" prefWidth="566.0">
+                          <columns>
+                            <TableColumn fx:id="codcolum" prefWidth="128.00000286102295" text="COD." />
+                              <TableColumn fx:id="vulncolum" maxWidth="1.7976931348623157E308" prefWidth="436.8000091552734" text="Vulnerabilidad" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="btagregar" alignment="CENTER" contentDisplay="CENTER" layoutX="604.0" layoutY="249.0" mnemonicParsing="false" onAction="#agregar" prefHeight="39.0" prefWidth="86.0" text="Agregar" textAlignment="CENTER" textFill="#2a0386" textOverrun="CLIP">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font></Button>
+                        <ComboBox fx:id="codBox" layoutX="593.0" layoutY="150.0" onAction="#seleccion" prefHeight="31.0" prefWidth="216.0" promptText="COD." />
+                        <ComboBox fx:id="cod2Box" layoutX="594.0" layoutY="203.0" prefHeight="30.0" prefWidth="212.0" promptText="Vulnerabilidad" />
+                        <Button fx:id="bteliminar" alignment="CENTER" contentDisplay="CENTER" layoutX="711.0" layoutY="249.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="39.0" prefWidth="86.0" text="Eliminar" textAlignment="CENTER" textFill="#2a0386" textOverrun="CLIP">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                        </Button>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Generar">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Separator layoutX="14.0" layoutY="100.0" prefHeight="24.0" prefWidth="795.0" />
+                        <ImageView fitHeight="97.0" fitWidth="681.0" layoutX="85.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../sources/img/generar.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="110.0" layoutY="111.0" prefHeight="62.0" prefWidth="191.0" text="Resumen" textAlignment="CENTER" textFill="#dabfff" textOverrun="CENTER_ELLIPSIS">
+                           <font>
+                              <Font name="Calibri Bold" size="26.0" />
+                           </font>
+                           <effect>
+                              <Bloom threshold="0.76" />
+                           </effect>
+                        </Label>
+                        <Label layoutX="27.0" layoutY="186.0" prefHeight="22.0" prefWidth="68.0" text="Empresa:" textFill="#dabfff" textOverrun="CLIP">
+                           <font>
+                              <Font name="Calibri Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutY="162.0" prefHeight="24.0" prefWidth="411.0" />
+                        <Label alignment="TOP_LEFT" layoutX="27.0" layoutY="222.0" prefHeight="22.0" prefWidth="68.0" text="Auditor:" textFill="#dabfff" textOverrun="CLIP">
+                           <font>
+                              <Font name="Calibri Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="27.0" layoutY="258.0" prefHeight="22.0" prefWidth="68.0" text="Auditoria:" textFill="#dabfff" textOverrun="CLIP">
+                           <font>
+                              <Font name="Calibri Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="27.0" layoutY="293.0" prefHeight="22.0" prefWidth="68.0" text="Empresa:" textFill="#dabfff" textOverrun="CLIP">
+                           <font>
+                              <Font name="Calibri Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="27.0" layoutY="326.0" prefHeight="22.0" prefWidth="90.0" text="Vulnerabilidades:" textFill="#dabfff" textOverrun="CLIP">
+                           <font>
+                              <Font name="Calibri Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="138.0" layoutY="186.0" prefHeight="22.0" prefWidth="68.0" textFill="#dabfff" textOverrun="CLIP">
+                           <font>
+                              <Font name="Calibri Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="138.0" layoutY="222.0" prefHeight="22.0" prefWidth="68.0" textFill="#dabfff" textOverrun="CLIP">
+                           <font>
+                              <Font name="Calibri Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="117.0" layoutY="258.0" prefHeight="22.0" prefWidth="68.0" textFill="#dabfff" textOverrun="CLIP">
+                           <font>
+                              <Font name="Calibri Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="126.0" layoutY="293.0" prefHeight="22.0" prefWidth="68.0" textFill="#dabfff" textOverrun="CLIP">
+                           <font>
+                              <Font name="Calibri Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="126.0" layoutY="326.0" prefHeight="22.0" prefWidth="68.0" textFill="#dabfff" textOverrun="CLIP">
+                           <font>
+                              <Font name="Calibri Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="138.0" layoutY="364.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="135.0" text="Generar Informe" textAlignment="CENTER" textFill="#2a0386" textOverrun="CLIP">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+         <opaqueInsets>
+            <Insets top="100.0" />
+         </opaqueInsets>
+      </TabPane>
+   </children>
+</AnchorPane>
